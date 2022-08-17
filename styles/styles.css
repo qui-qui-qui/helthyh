@@ -1,0 +1,1633 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+/* line 3, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* line 17, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+svg path {
+  transition: .1s;
+}
+
+/* line 21, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+svg:hover path {
+  d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+}
+
+/* line 26, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+/* line 33, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+h3 {
+  font-weight: 400;
+}
+
+/* line 37, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.slider-bottom {
+  color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 30vw;
+  text-align: center;
+}
+
+/* line 44, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+main {
+  background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10vh 0 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/** Inspired by: http://graphicburger.com/flat-design-ui-components/ **/
+/** Line-chart and donut-chart made by @kseso https://codepen.io/Kseso/pen/phiyL **/
+/************************************ FONTS ************************************/
+/* entypo */
+/* line 61, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* fontawesome */
+/* line 65, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* zocial */
+/* line 69, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("https://jlalovi-cv.herokuapp.com/font/icomoon.eot");
+  src: url("https://jlalovi-cv.herokuapp.com/font/icomoon.eot?#iefix") format("embedded-opentype"), url("https://jlalovi-cv.herokuapp.com/font/icomoon.ttf") format("truetype"), url("https://jlalovi-cv.herokuapp.com/font/icomoon.woff") format("woff"), url("https://jlalovi-cv.herokuapp.com/font/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 83, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 96, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.icon-cloudy:before {
+  content: "\e60f";
+}
+
+/* line 99, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.icon-sun:before {
+  content: "\e610";
+}
+
+/* line 102, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.icon-cloudy2:before {
+  content: "\e611";
+}
+
+/************************************* END FONTS *************************************/
+/* line 107, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 113, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 119, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+h1 {
+  font-size: 23px;
+}
+
+/* line 123, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+h2 {
+  font-size: 17px;
+}
+
+/* line 127, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+p {
+  font-size: 15px;
+}
+
+/* line 131, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* line 135, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 139, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+h1, h2, p, a, span {
+  color: #fff;
+}
+
+/* line 142, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.scnd-font-color {
+  color: #9099b7;
+}
+
+/* line 146, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.input-container {
+  position: relative;
+}
+
+/* line 149, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text] {
+  width: 260px;
+  height: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 45px;
+  background: #50597b;
+  color: #fff;
+  border: solid 1px #1f253d;
+  border-radius: 5px;
+}
+
+/* line 160, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text]::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+
+/* line 163, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text]:-moz-input-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+
+/* line 166, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text]::-moz-input-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+
+/* line 169, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text]:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+/* line 172, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+input[type=text]:focus {
+  outline: none;
+  /* removes the default orange border when focus */
+  border: 1px solid #11a8ab;
+}
+
+/* line 176, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.input-icon {
+  font-size: 22px;
+  position: absolute;
+  left: 31px;
+  top: 10px;
+}
+
+/* line 182, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.input-icon.password-icon {
+  left: 35px;
+}
+
+/* line 186, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 191, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.horizontal-list li {
+  float: left;
+}
+
+/* line 195, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.clear {
+  clear: both;
+}
+
+/* line 199, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.icon {
+  font-size: 25px;
+}
+
+/* line 203, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.titular {
+  display: block;
+  line-height: 60px;
+  margin: 0;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* line 212, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.button {
+  display: block;
+  width: 175px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 224, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.button:hover {
+  text-decoration: none;
+}
+
+/* line 228, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn-container {
+  position: relative;
+}
+
+/* line 231, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 239, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn:hover {
+  text-decoration: none;
+}
+
+/* line 242, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn.left {
+  border-top-left-radius: 5px;
+}
+
+/* line 245, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn.right {
+  border-top-right-radius: 5px;
+  right: 0;
+  top: 0;
+}
+
+/* line 250, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn .icon {
+  display: block;
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  line-height: 17px;
+  width: 21px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* line 260, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.arrow-btn.left .icon {
+  padding-right: 2px;
+}
+
+/* line 264, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-picture {
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 271, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.big-profile-picture {
+  margin: 0 auto;
+  border: 5px solid #50597b;
+  width: 150px;
+  height: 150px;
+}
+
+/* line 277, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.small-profile-picture {
+  border: 2px solid #50597b;
+  width: 40px;
+  height: 40px;
+}
+
+/** MAIN CONTAINER **/
+/* line 286, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.main-container {
+  font-family: 'Ubuntu', sans-serif;
+  width: 950px;
+  height: 1725px;
+  margin: 6em auto;
+}
+
+/*********************************************** HEADER ***********************************************/
+/* line 293, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+header {
+  height: 80px;
+}
+
+/* line 296, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu {
+  font-size: 17px;
+  line-height: 80px;
+}
+
+/* line 300, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu li {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  /** To avoid a flash when hover messages **/
+}
+
+/* line 304, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu-tab {
+  padding: 0 27px;
+  display: block;
+  line-height: 74px;
+  font-size: 17px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 312, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu-tab:hover {
+  background: #50597b;
+  border-bottom: 4px solid #11a8ab;
+  text-decoration: none;
+}
+
+/* line 317, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu-tab .icon {
+  padding-right: 15px;
+}
+
+/* line 320, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu-number {
+  position: absolute;
+  line-height: 22px;
+  padding: 0 6px;
+  font-weight: 700;
+  background: #e64c65;
+  border-radius: 100%;
+  top: 15px;
+  right: 2px;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+/* line 332, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.header-menu li:hover .header-menu-number {
+  text-decoration: none;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/* line 338, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-menu {
+  float: right;
+  height: 80px;
+  padding-right: 20px;
+}
+
+/* line 343, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-menu p {
+  font-size: 17px;
+  display: inline-block;
+  line-height: 76px;
+  margin: 0;
+  padding-right: 10px;
+}
+
+/* line 350, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-menu a {
+  padding-left: 5px;
+}
+
+/* line 353, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-menu a:hover {
+  text-decoration: none;
+}
+
+/* line 356, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.small-profile-picture {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/** CONTAINERS **/
+/* line 361, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.container {
+  float: left;
+  width: 300px;
+}
+
+/* line 365, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.block {
+  margin-bottom: 25px;
+  background: #394264;
+  border-radius: 5px;
+}
+
+/******************************************** LEFT CONTAINER *****************************************/
+/* line 372, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box {
+  height: 360px;
+}
+
+/* line 375, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box .titular {
+  background: #11a8ab;
+}
+
+/* line 378, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-menu .icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 28px;
+  margin-left: 20px;
+  margin-right: 15px;
+}
+
+/* line 385, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-number {
+  width: 36px;
+  line-height: 22px;
+  background: #50597b;
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 397, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-menu li {
+  height: 60px;
+  position: relative;
+}
+
+/* line 401, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-tab {
+  line-height: 60px;
+  display: block;
+  border-bottom: 1px solid #1f253d;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+/* line 408, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-tab:hover {
+  background: #50597b;
+  border-top: 1px solid #1f253d;
+  text-decoration: none;
+}
+
+/* line 413, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-tab:hover .icon {
+  color: #fff;
+}
+
+/* line 416, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.menu-box-tab:hover .menu-box-number {
+  background: #e64c65;
+}
+
+/* line 419, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.donut-chart-block {
+  height: 434px;
+}
+
+/* line 422, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.donut-chart-block .titular {
+  padding: 10px 0;
+}
+
+/* line 425, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.donut-chart {
+  height: 270px;
+}
+
+/******************************************
+				DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+/* line 431, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.donut-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 100%;
+}
+
+/* line 438, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+p.center-date {
+  background: #394264;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 35px;
+  padding: 15% 0 0;
+}
+
+/* line 451, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.center-date span.scnd-font-color {
+  line-height: 0;
+}
+
+/* line 454, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.recorte {
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 461, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.quesito {
+  border-radius: 50%;
+  clip: rect(0px, 100px, 200px, 0px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+/* line 470, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion1 {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 475, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion1 .quesito {
+  background-color: #E64C65;
+  -webkit-transform: rotate(76deg);
+  transform: rotate(76deg);
+}
+
+/* line 480, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion2 {
+  -webkit-transform: rotate(76deg);
+  transform: rotate(76deg);
+}
+
+/* line 484, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion2 .quesito {
+  background-color: #11A8AB;
+  -webkit-transform: rotate(140deg);
+  transform: rotate(140deg);
+}
+
+/* line 489, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion3 {
+  -webkit-transform: rotate(215deg);
+  transform: rotate(215deg);
+}
+
+/* line 493, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcion3 .quesito {
+  background-color: #4FC4F6;
+  -webkit-transform: rotate(113deg);
+  transform: rotate(113deg);
+}
+
+/* line 498, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcionFin {
+  -webkit-transform: rotate(-32deg);
+  transform: rotate(-32deg);
+}
+
+/* line 502, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#porcionFin .quesito {
+  background-color: #FCB150;
+  -webkit-transform: rotate(32deg);
+  transform: rotate(32deg);
+}
+
+/******************************************
+				END DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+/* line 510, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os-percentages {
+  padding-top: 36px;
+}
+
+/* line 513, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os-percentages li {
+  width: 75px;
+  border-left: 1px solid #394264;
+  text-align: center;
+  background: #50597b;
+}
+
+/* line 519, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os {
+  margin: 0;
+  padding: 10px 0 5px;
+  font-size: 15px;
+}
+
+/* line 524, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os.ios {
+  border-top: 4px solid #e64c65;
+}
+
+/* line 527, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os.mac {
+  border-top: 4px solid #11a8ab;
+}
+
+/* line 530, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os.linux {
+  border-top: 4px solid #fcb150;
+}
+
+/* line 533, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os.win {
+  border-top: 4px solid #4fc4f6;
+}
+
+/* line 536, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.os-percentage {
+  margin: 0;
+  padding: 0 0 15px 10px;
+  font-size: 25px;
+}
+
+/* line 541, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.line-chart-block {
+  height: 400px;
+}
+
+/* line 544, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.line-chart {
+  height: 200px;
+  background: #11a8ab;
+}
+
+/******************************************
+				LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+/* line 551, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.grafico {
+  padding: 2rem 1rem 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  font-size: 80%;
+}
+
+/* line 559, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.grafico span {
+  display: block;
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  height: 0;
+  border-top: 2px solid;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+/* line 569, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.grafico span > span {
+  left: 100%;
+  bottom: 0;
+}
+
+/* line 572, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='25'] {
+  width: 75px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 573, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='8'] {
+  width: 24px;
+  -webkit-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+
+/* line 574, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='13'] {
+  width: 39px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 575, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='5'] {
+  width: 15px;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+/* line 576, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='23'] {
+  width: 69px;
+  -webkit-transform: rotate(-70deg);
+  transform: rotate(-70deg);
+}
+
+/* line 577, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='12'] {
+  width: 36px;
+  -webkit-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+
+/* line 578, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='15'] {
+  width: 45px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 580, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor]:before {
+  content: '';
+  position: absolute;
+  display: block;
+  right: -4px;
+  bottom: -3px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* line 590, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-valor='23']:after {
+  content: "+" attr(data-valor) "%";
+  position: absolute;
+  right: -2.7rem;
+  top: -1.7rem;
+  padding: .3rem .5rem;
+  background: #50597B;
+  border-radius: .5rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 601, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[class^='eje-'] {
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+  width: 100%;
+  padding: 1rem 1rem 0 2rem;
+  height: 80%;
+}
+
+/* line 609, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.eje-x {
+  height: 2.5rem;
+}
+
+/* line 612, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.eje-y li {
+  height: 25%;
+  border-top: 1px solid #777;
+}
+
+/* line 616, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+[data-ejeY]:before {
+  content: attr(data-ejeY);
+  display: inline-block;
+  width: 2rem;
+  text-align: right;
+  line-height: 0;
+  position: relative;
+  left: -2.5rem;
+  top: -.5rem;
+}
+
+/* line 626, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.eje-x li {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+/******************************************
+				END LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL
+				******************************************/
+/* line 634, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.time-lenght {
+  padding-top: 22px;
+  padding-left: 38px;
+}
+
+/* line 638, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.time-lenght-btn {
+  display: block;
+  width: 70px;
+  line-height: 32px;
+  background: #50597b;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 5px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 650, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.time-lenght-btn:hover {
+  text-decoration: none;
+  background: #e64c65;
+}
+
+/* line 654, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.month-data {
+  padding-top: 28px;
+}
+
+/* line 657, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.month-data p {
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px 15px;
+  font-size: 16px;
+}
+
+/* line 663, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.month-data p:last-child {
+  padding: 0 25px;
+  float: right;
+  font-size: 15px;
+}
+
+/* line 668, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.increment {
+  color: #e64c65;
+}
+
+/* line 671, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.media {
+  height: 216px;
+}
+
+/* line 674, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#media-display {
+  position: relative;
+  height: 180px;
+  background: #787878 url("https://www.fancinema.com.ar/wp-content/uploads/catwoman1.jpg") center top;
+}
+
+/* line 679, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#media-display .play {
+  position: absolute;
+  top: 75px;
+  right: 32px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  padding: 2px 5px 2px 9px;
+}
+
+/* line 687, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+#media-display .play:hover {
+  border: 2px solid #e64c65;
+}
+
+/* line 690, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.media-control-bar {
+  padding: 6px 0 0 15px;
+}
+
+/* line 693, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.media-btn, .time-passed {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 697, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.media-btn {
+  font-size: 19px;
+}
+
+/* line 700, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.media-btn:hover, .media-btn:hover span {
+  text-decoration: none;
+  color: #e64c65;
+}
+
+/* line 704, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.play {
+  margin-right: 100px;
+}
+
+/* line 707, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.volume {
+  margin-left: 30px;
+}
+
+/* line 710, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.resize {
+  margin-left: 12px;
+}
+
+/* line 713, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social {
+  height: 110px;
+}
+
+/* line 716, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social li {
+  width: 75px;
+  height: 110px;
+}
+
+/* line 720, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social li .icon {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  line-height: 75px;
+}
+
+/* line 726, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social li .number {
+  text-align: center;
+  margin: 0;
+  line-height: 34px;
+}
+
+/* line 731, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .facebook {
+  background: #3468af;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* line 736, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .facebook .number {
+  background: #1a4e95;
+  border-bottom-left-radius: 5px;
+}
+
+/* line 740, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .twitter {
+  background: #4fc4f6;
+}
+
+/* line 743, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .twitter .icon {
+  font-size: 18px;
+}
+
+/* line 746, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .twitter .number {
+  background: #35aadc;
+}
+
+/* line 749, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .googleplus {
+  background: #e64c65;
+}
+
+/* line 752, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .googleplus .number {
+  background: #cc324b;
+}
+
+/* line 755, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .mailbox {
+  background: #50597b;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* line 760, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.left-container .social .mailbox .number {
+  background: #363f61;
+  border-bottom-right-radius: 5px;
+}
+
+/************************************************** MIDDLE CONTAINER **********************************/
+/* line 765, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container {
+  margin: 0 25px;
+}
+
+/* line 768, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile {
+  height: 410px;
+}
+
+/* line 771, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.add-button .icon {
+  float: right;
+  line-height: 18px;
+  width: 23px;
+  border: 2px solid;
+  border-radius: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+}
+
+/* line 781, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.add-button .icon:hover {
+  color: #e64c65;
+  border-color: #e64c65;
+}
+
+/* line 785, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.user-name {
+  margin: 25px 0 16px;
+  text-align: center;
+}
+
+/* line 789, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-description {
+  width: 210px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 794, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options {
+  padding-top: 23px;
+}
+
+/* line 797, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options li {
+  border-left: 1px solid #1f253d;
+}
+
+/* line 800, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options p {
+  margin: 0;
+}
+
+/* line 803, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options a {
+  display: block;
+  width: 99px;
+  line-height: 60px;
+  text-align: center;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 811, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options a:hover {
+  text-decoration: none;
+  background: #50597b;
+}
+
+/* line 815, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options a:hover.comments .icon {
+  color: #fcb150;
+}
+
+/* line 818, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options a:hover.views .icon {
+  color: #11a8ab;
+}
+
+/* line 821, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options a:hover.likes .icon {
+  color: #e64c65;
+}
+
+/* line 824, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options .icon {
+  padding-right: 10px;
+}
+
+/* line 827, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options .comments {
+  border-top: 4px solid #fcb150;
+}
+
+/* line 830, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options .views {
+  border-top: 4px solid #11a8ab;
+}
+
+/* line 833, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.profile-options .likes {
+  border-top: 4px solid #e64c65;
+}
+
+/* line 836, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather {
+  height: 555px;
+}
+
+/* line 839, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .titular {
+  background: #cc324b;
+}
+
+/* line 842, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .titular .icon {
+  padding-right: 15px;
+  font-size: 26px;
+}
+
+/* line 846, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .current-day {
+  height: 135px;
+  background: #e64c65;
+}
+
+/* line 850, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .current-day p {
+  margin: 0;
+  padding-left: 50px;
+}
+
+/* line 854, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.current-day-date {
+  font-size: 16px;
+  padding-top: 16px;
+}
+
+/* line 858, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.current-day-temperature {
+  font-size: 70px;
+}
+
+/* line 861, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.current-day-temperature .icon-cloudy {
+  padding-left: 20px;
+}
+
+/* line 865, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days p {
+  margin: 0;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* line 870, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days a {
+  display: block;
+  line-height: 58px;
+  border-bottom: 1px solid #1f253d;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 877, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days a:hover {
+  background: #50597b;
+}
+
+/* line 880, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days a:hover .day {
+  color: #e64c65;
+}
+
+/* line 883, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days-date {
+  padding-left: 20px;
+}
+
+/* line 886, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days-temperature {
+  float: right;
+  padding-right: 20px;
+}
+
+/* line 890, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.weather .next-days-temperature .icon {
+  padding-left: 10px;
+}
+
+/* line 893, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweets {
+  height: 375px;
+}
+
+/* line 896, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweets .titular {
+  background: #35aadc;
+}
+
+/* line 899, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweets .titular .icon {
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+/* line 903, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweet.first {
+  height: 150px;
+  border-bottom: 1px solid #1f253d;
+}
+
+/* line 907, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweet p:first-child {
+  margin: 0;
+  padding: 30px 30px 0;
+}
+
+/* line 911, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweet p:last-child {
+  margin: 0;
+  padding: 15px 30px 0;
+}
+
+/* line 915, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.tweet-link {
+  color: #4fc4f6;
+}
+
+/* line 918, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social {
+  height: 205px;
+  background: #1f253d;
+}
+
+/* line 922, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social li {
+  margin-bottom: 12px;
+}
+
+/* line 925, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a {
+  line-height: 60px;
+}
+
+/* line 928, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover {
+  text-decoration: none;
+}
+
+/* line 931, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .titular {
+  border-radius: 5px;
+}
+
+/* line 934, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .facebook {
+  background: #3468af;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 939, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .facebook {
+  background: #1a4e95;
+}
+
+/* line 942, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .icon.facebook {
+  background: #3468af;
+}
+
+/* line 945, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .twitter {
+  background: #4fc4f6;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 950, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .twitter {
+  background: #35aadc;
+}
+
+/* line 953, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .icon.twitter {
+  background: #4fc4f6;
+}
+
+/* line 956, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .googleplus {
+  background: #e64c65;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 961, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .googleplus {
+  background: #cc324b;
+}
+
+/* line 964, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social a:hover .icon.googleplus {
+  background: #e64c65;
+}
+
+/* line 967, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .icon {
+  float: left;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* line 976, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .icon.facebook {
+  background: #1a4e95;
+}
+
+/* line 979, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .icon.twitter {
+  background: #35aadc;
+}
+
+/* line 982, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.middle-container .social .icon.googleplus {
+  background: #cc324b;
+}
+
+/********************************************* RIGHT CONTAINER ****************************************/
+/* line 987, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.join-newsletter {
+  height: 230px;
+}
+
+/* line 990, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.join-newsletter .titular {
+  padding-top: 10px;
+}
+
+/* line 993, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.subscribe.button {
+  background: #11a8ab;
+  margin-top: 10px;
+}
+
+/* line 997, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.subscribe.button:hover {
+  background: #0F9295;
+}
+
+/* line 1000, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.account {
+  height: 390px;
+}
+
+/* line 1003, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.account .titular {
+  padding: 10px 0;
+}
+
+/* line 1006, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.sign-in.button {
+  background: #e64c65;
+  margin: 10px auto;
+}
+
+/* line 1010, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.sign-in.button:hover {
+  background: #cc324b;
+}
+
+/* line 1013, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.account p {
+  text-align: center;
+}
+
+/* line 1016, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.fb-sign-in {
+  margin-top: 28px;
+  display: block;
+  line-height: 50px;
+  background: #3468af;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+/* line 1026, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.fb-sign-in:hover {
+  background: #1a4e95;
+  text-decoration: none;
+}
+
+/* line 1030, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.fb-sign-in .icon {
+  line-height: 20px;
+  font-size: 12px;
+  padding-right: 3px;
+}
+
+/* line 1035, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.fb-border {
+  display: inline-block;
+  width: 23px;
+  line-height: 20px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+/* line 1043, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.loading {
+  height: 200px;
+  padding-top: 35px;
+}
+
+/* line 1047, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.loading p {
+  display: inline-block;
+  padding-left: 30px;
+  margin: 5px 0 20px;
+}
+
+/* line 1052, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.loading .icon {
+  padding-right: 15px;
+}
+
+/* line 1055, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.loading .percentage {
+  float: right;
+  padding: 6px 35px 0 0;
+}
+
+/* line 1059, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.loading .progress-bar {
+  width: 250px;
+  height: 20px;
+  background: #50597b;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* line 1066, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.progress-bar.downloading {
+  background: -webkit-linear-gradient(left, #11a8ab 81%, #50597b 81%);
+  /* Chrome10+,Safari5.1+ */
+  background: -ms-linear-gradient(left, #11a8ab 81%, #50597b 81%);
+  /* IE10+ */
+  background: linear-gradient(to right, #11a8ab 81%, #50597b 81%);
+  /* W3C */
+}
+
+/* line 1071, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.progress-bar.uploading {
+  background: -webkit-linear-gradient(left, #4fc4f6 43%, #50597b 43%);
+  /* Chrome10+,Safari5.1+ */
+  background: -ms-linear-gradient(left, #4fc4f6 43%, #50597b 43%);
+  /* IE10+ */
+  background: linear-gradient(to right, #4fc4f6 43%, #50597b 43%);
+  /* W3C */
+}
+
+/* line 1076, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-day {
+  height: 320px;
+  background: #3468af;
+}
+
+/* line 1080, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-day .titular {
+  background: #1a4e95;
+}
+
+/* line 1083, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-day .arrow-btn:hover {
+  background: #16417E;
+}
+
+/* line 1086, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-day .the-day {
+  margin: 0;
+  text-align: center;
+  font-size: 146px;
+}
+
+/* line 1091, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.add-event.button {
+  background: #4fc4f6;
+}
+
+/* line 1094, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.add-event.button:hover {
+  background: #35aadc;
+}
+
+/* line 1097, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-month {
+  height: 380px;
+}
+
+/* line 1100, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-month .titular {
+  background: #3468af;
+}
+
+/* line 1103, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar-month .arrow-btn:hover {
+  background: #1a4e95;
+}
+
+/* line 1106, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar {
+  margin: 22px 15px;
+  text-align: center;
+}
+
+/* line 1110, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar a {
+  font-size: 17px;
+}
+
+/* line 1113, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar td, .calendar th {
+  width: 40px;
+  height: 38px;
+}
+
+/* line 1117, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar .days-week {
+  color: #4fc4f6;
+}
+
+/* line 1120, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+.calendar .today {
+  display: block;
+  width: 34px;
+  line-height: 34px;
+  background: #e64c65;
+  border-radius: 100%;
+}
+
+/* line 1128, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+footer {
+  background: #c0d0ff;
+  padding: 5vh 0;
+  text-align: center;
+  position: relative;
+}
+
+/* line 1135, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+small {
+  opacity: .5;
+  font-weight: 300;
+}
+
+/* line 1139, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+small a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
