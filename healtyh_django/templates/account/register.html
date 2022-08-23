@@ -1,0 +1,8 @@
+{% extends "base/base.html" %}{% load static %}{% block title %}Registration{% endblock%} {% block content %}
+<h1>Создание аккаунта</h1>
+<p>Пожалуйста, зарегестрируйтесь, используя форму ниже:</p>
+<form action="." method="post">
+    {{ user_form.as_p }} {% csrf_token %}
+    <p><input type="submit" value="Создать"></p>
+</form>
+{% endblock %}
