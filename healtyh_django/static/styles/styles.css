@@ -8,55 +8,14 @@
   padding: 0;
 }
 
-/* line 8, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-.svg-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  
-}
-
-/* line 17, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-svg path {
-  transition: .1s;
-}
-
-/* line 21, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-svg:hover path {
-  d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
-}
-
-/* line 26, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
 body {
   background: #fff;
   color: #333;
   font-family: 'Ubuntu', sans-serif;
   position: relative;
+  transition: 1s;
 }
 
-/* line 33, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-h3 {
-  font-weight: 400;
-}
-
-/* line 37, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-.slider-bottom {
-  color: #fff;
-  padding-top: 10vw;
-  padding-bottom: 30vw;
-  text-align: center;
-}
-
-/* line 44, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-
-
-/** Inspired by: http://graphicburger.com/flat-design-ui-components/ **/
-/** Line-chart and donut-chart made by @kseso https://codepen.io/Kseso/pen/phiyL **/
-/************************************ FONTS ************************************/
-/* entypo */
-/* line 61, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
@@ -152,8 +111,12 @@ a:hover {
 }
 
 /* line 139, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-h1, h2, p, a, span {
+h1, h2, h3, p, a, span {
   color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* line 142, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
@@ -161,69 +124,6 @@ h1, h2, p, a, span {
   color: #9099b7;
 }
 
-/* line 146, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-.input-container {
-  position: relative;
-}
-
-/* line 149, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text] {
-  width: 260px;
-  height: 50px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  padding-left: 45px;
-  background: #50597b;
-  color: #fff;
-  border: solid 1px #1f253d;
-  border-radius: 5px;
-}
-
-/* line 160, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text]::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: #fff;
-}
-
-/* line 163, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text]:-moz-input-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #fff;
-}
-
-/* line 166, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text]::-moz-input-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #fff;
-}
-
-/* line 169, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text]:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: #fff;
-}
-
-/* line 172, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-input[type=text]:focus {
-  outline: none;
-  /* removes the default orange border when focus */
-  border: 1px solid #11a8ab;
-}
-
-/* line 176, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-.input-icon {
-  font-size: 22px;
-  position: absolute;
-  left: 31px;
-  top: 10px;
-}
-
-/* line 182, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-.input-icon.password-icon {
-  left: 35px;
-}
-
-/* line 186, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
 .horizontal-list {
   margin: 0;
   padding: 0;
