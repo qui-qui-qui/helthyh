@@ -4,41 +4,47 @@
     right: 0;
     left: 0;
     z-index: -1;
-    
-  }
-  
-  /* line 17, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  svg path {
+}
+
+
+/* line 17, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+svg path {
     transition: .1s;
-  }
-  
-  /* line 21, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  svg:hover path {
+}
+
+
+/* line 21, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+svg:hover path {
     d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
-  }
-  
-  /* line 26, G:/униве/фронт/projects/healthylosophy/scss/styles.scss */
-  
-  
-  /* line 33, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  h3 {
+}
+
+
+/* line 26, G:/униве/фронт/projects/healthylosophy/scss/styles.scss */
+
+
+/* line 33, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+h3 {
     font-weight: 400;
-  }
-  
-  /* line 37, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  .slider-bottom {
+}
+
+
+/* line 37, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+.slider-bottom {
     color: #fff;
     padding-top: 10vw;
     padding-bottom: 30vw;
     text-align: center;
-  }
+}
 
 .form-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 200px;
-    
 }
 
 .form {
@@ -46,7 +52,6 @@
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 500px;
     padding: 20px;
     width: 500px;
 }
@@ -97,8 +102,10 @@
 .input-container {
     position: relative;
 }
-  
-input[type=text], input[type=password] {
+
+input[type=email],
+input[type=text],
+input[type=password] {
     width: 260px;
     height: 50px;
     margin-bottom: 20px;
@@ -107,52 +114,62 @@ input[type=text], input[type=password] {
     color: #fff;
     border: solid 1px #1f253d;
     border-radius: 5px;
-  }
-  
-  
-  input[type=text]::-webkit-input-placeholder {
+}
+
+input[type=text]::-webkit-input-placeholder {
     /* WebKit browsers */
     color: #fff;
-  }
-  
-  /* line 163, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  input[type=text]:-moz-input-placeholder {
+}
+
+
+/* line 163, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+input[type=text]:-moz-input-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: #fff;
-  }
-  
-  /* line 166, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  input[type=text]::-moz-input-placeholder {
+}
+
+
+/* line 166, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+input[type=text]::-moz-input-placeholder {
     /* Mozilla Firefox 19+ */
     color: #fff;
-  }
-  
-  /* line 169, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  input[type=text]:-ms-input-placeholder {
+}
+
+
+/* line 169, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+input[type=text]:-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #fff;
-  }
-  
-  /* line 172, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  input[type=text]:focus {
+}
+
+
+/* line 172, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+input[type=text]:focus {
     outline: none;
     /* removes the default orange border when focus */
     border: 1px solid #11a8ab;
-  }
-  
-  /* line 176, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  .input-icon {
+}
+
+
+/* line 176, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+.input-icon {
     font-size: 22px;
     position: absolute;
     left: 31px;
     top: 10px;
-  }
-  
-  /* line 182, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
-  .input-icon.password-icon {
+}
+
+
+/* line 182, G:/универ/фронт/projects/healthylosophy/scss/styles.scss */
+
+.input-icon.password-icon {
     left: 35px;
-  }
-  
+}
 
 .cut {
     background-color: #15172b;
@@ -170,8 +187,8 @@ input[type=text], input[type=password] {
     width: 50px;
 }
 
-.input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut {
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
     transform: translateY(8px);
 }
 
@@ -187,16 +204,16 @@ input[type=text], input[type=password] {
     top: 20px;
 }
 
-.input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
     transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown) ~ .placeholder {
+.input:not(:placeholder-shown)~.placeholder {
     color: #808097;
 }
 
-.input:focus ~ .placeholder {
+.input:focus~.placeholder {
     color: #dc2f55;
 }
 
@@ -218,4 +235,3 @@ input[type=text], input[type=password] {
 .submit:active {
     background-color: #06b;
 }
-  

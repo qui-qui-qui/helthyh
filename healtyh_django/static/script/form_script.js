@@ -1,4 +1,3 @@
-
 window.onscroll = function() {
     let scrollBot = window.pageYOffset;
 
@@ -11,12 +10,12 @@ window.onscroll = function() {
     } else {
         document.querySelector('body').style.backgroundColor = 'white';
     }
-  };
+};
 
 
 
-const btnSub = document.querySelector('.submit');
+// const btnSub = document.querySelector('.submit');
 
-btnSub.onclick = () => {
-    window.open("../../templates/account/register_done.html")
-}
+// btnSub.onclick = () => {
+//     window.open("../../templates/account/register_done.html")
+// }
