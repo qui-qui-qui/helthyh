@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}{% load static %}{% block title %}Login{% endblock%} {% block form_styles %}
+<link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block content %}
+
+
+<div class="form-container">
+    <form class="form" action="." method="post">
+        {% if error_msg %}
+        <p>{{error_msg}}</p>
+        {% endif %}
+        <div class="input-container ic1">
+            {{ form.username.errors }}
+            <input name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}" class="input" type="text" required placeholder=" " />
+            <div class="cut"></div>
+            <label for="{{ form.username.id_for_label }}" class="placeholder">Username</label>
+        </div>
+        <div class="input-container ic1">
+            {{ form.password.errors }}
+            <input name="{{ form.password.html_name }}" id="{{ form.password.id_for_label }}" class="input" type="password" required placeholder=" " />
+            <div class="cut"></div>
+            <label for="{{ form.password.id_for_label }}" class="placeholder">Password</label>
+        </div> {% csrf_token %}
+        <a href="{% url 'register' %}">Регистрация</a>
+        <button type="text" class="submit">Log in</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -6,7 +6,7 @@
                 <a class="header-menu-tab" href="#1"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
             </li>
             <li>
-                <a class="header-menu-tab" href="{% url 'register' %}"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+                <a class="header-menu-tab" href="{% url 'edit' %}"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
             </li>
             <li>
                 <a class="header-menu-tab" href="#3"><span class="icon fontawesome-wrench scnd-font-color"></span>Widgets</a>
@@ -17,9 +17,9 @@
             </li>
         </ul>
         <div class="profile-menu">
-            <p>Me <a href="#26"><span class="entypo-down-open scnd-font-color"></span></a></p>
+            <p>{{request.user.username}} <a href="{% url 'logout' %}"><span class="entypo-down-open scnd-font-color"></span></a></p>
             <div class="profile-picture small-profile-picture">
-                <img width="40px" alt="Solo picture" src="https://upload.wikimedia.org/wikipedia/commons/4/48/AlexeyBerezin.png">
+                <img width="40px" alt="User photo" src="{{ request.user.account.photo.url }}">
             </div>
         </div>
     </header>
@@ -106,9 +106,9 @@
                 <!-- PROFILE (MIDDLE-CONTAINER) -->
                 <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
                 <div class="profile-picture big-profile-picture clear">
-                    <img width="150px" alt="Solo picture" src="https://upload.wikimedia.org/wikipedia/commons/4/48/AlexeyBerezin.png">
+                    <img width="150px" alt="User photo" src="{{ request.user.account.photo.url }}">
                 </div>
-                <h1 class="user-name">Алексей Березин</h1>
+                <h1 class="user-name">{{request.user.first_name}} {{request.user.last_name}}</h1>
                 <div class="profile-description">
                     <p class="scnd-font-color">dota advanced enjoyer</p>
                 </div>
