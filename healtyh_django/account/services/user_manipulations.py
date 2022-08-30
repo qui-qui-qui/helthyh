@@ -11,10 +11,16 @@ def register_user(user_form: UserRegistrationForm)->User:
     Account.objects.create(user=new_user)
     return new_user
 
-def authenticate_user(user_form: UserLoginForm)->User:
-    cd = user_form.cleaned_data
-    return authenticate(username=cd['username'], password=cd['password'])
+def _authenticate_user(username:str, password:str)->User:
+    return authenticate(username=username, password=password)
 
+def login_user(username:str,password:str, request)->bool:
+    user = _authenticate_user(username,password)
+    if user is not None:
+        login(request, user) 
+        return True
+    return False         
+                    
 
 def edit_user(user_form:UserEditForm, account_form:  AccountEditForm)->(UserEditForm,AccountEditForm):
     if user_form.is_valid() and account_form.is_valid():
