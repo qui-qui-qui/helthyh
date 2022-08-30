@@ -20,9 +20,8 @@ def register_user_view(request):
 def login_user_view(request):
     if request.method == 'POST':
         user_form = UserLoginForm(request.POST)
-        cd = user_form.cleaned_data()
         if user_form.is_valid():
-            if login_user(cd['username'],cd['password'],request):
+            if login_user(user_form.cleaned_data['username'],user_form.cleaned_data['password'],request):
                 return redirect('main_menu')                
             else:
                 error_msg="Your username and password didn't match. Please try again."
