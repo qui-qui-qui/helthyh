@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login,logout
 from .forms import  UserLoginForm, UserRegistrationForm, UserEditForm, AccountEditForm
-from .services.user_manipulations import register_user, edit_user,authenticate_user
+from .services.user_manipulations import register_user, edit_user,login_user
 
 
 def register_user_view(request):
@@ -10,6 +10,7 @@ def register_user_view(request):
         user_form = UserRegistrationForm(request.POST)
         if user_form.is_valid():
             new_user = register_user(user_form)
+            login_user(user_form.cleaned_data['username'],user_form.cleaned_data['password'],request)
             return render(request, 'account/register_done.html', {'new_user': new_user})
     else:
         user_form = UserRegistrationForm()
@@ -19,13 +20,10 @@ def register_user_view(request):
 def login_user_view(request):
     if request.method == 'POST':
         user_form = UserLoginForm(request.POST)
+        cd = user_form.cleaned_data()
         if user_form.is_valid():
-            user = authenticate_user(user_form)
-            print(user)
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    return redirect('main_menu')
+            if login_user(cd['username'],cd['password'],request):
+                return redirect('main_menu')                
             else:
                 error_msg="Your username and password didn't match. Please try again."
             return render(request, 'account/login.html', {'error_msg':error_msg,'form': user_form})
