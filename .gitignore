@@ -3,7 +3,7 @@
 **\__pycache__
 **\.vscode
 **\venv
-##**\media
+**\media
 **\data
 *.sqlite3
 *.session
