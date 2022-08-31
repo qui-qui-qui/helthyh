@@ -47,6 +47,10 @@ h3 {
     margin-bottom: 200px;
 }
 
+.login {
+    margin: 183px 0;
+}
+
 .form {
     text-align: center;
     background-color: #15172b;
@@ -55,6 +59,8 @@ h3 {
     padding: 20px;
     width: 500px;
 }
+
+
 
 .title {
     color: #eee;
@@ -217,7 +223,7 @@ input[type=text]:focus {
     color: #dc2f55;
 }
 
-.submit {
+.submit-btn {
     background-color: #08d;
     border-radius: 12px;
     border: 0;
@@ -235,3 +241,42 @@ input[type=text]:focus {
 .submit:active {
     background-color: #06b;
 }
+
+.login-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btns .submit {
+    width: 190px;
+}
+
+
+.login-btns .submit.registration-btn {
+    background-color: #e4667b;
+    width: 70px;
+}
+
+.edit-account {
+    margin-top: 50px;
+    width: 50%;
+}
+
+.edit-account div {
+    display: flex;
+}
+
+.edit-account div label {
+    display: flex;
+    width: 40%;
+    height: 50px;
+    color: #fff;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.edit-account div input[type="file"] {
+    color: rgb(196, 193, 193);
+}
+
+

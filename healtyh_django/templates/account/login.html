@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block content %}
 
 
-<div class="form-container">
+<div class="form-container login">
     <form class="form" action="." method="post">
         {% if error_msg %}
         <p>{{error_msg}}</p>
@@ -19,8 +19,11 @@
             <div class="cut"></div>
             <label for="{{ form.password.id_for_label }}" class="placeholder">Password</label>
         </div> {% csrf_token %}
-        <a href="{% url 'register' %}">Регистрация</a>
-        <button type="text" class="submit">Log in</button>
+
+        <div class="login-btns">
+            <button class="submit-btn">Log in</button>
+            <button class="submit-btn registration-btn"><a href="{% url 'register' %}">Sign in</a></button>
+        </div>
     </form>
 </div>
 
