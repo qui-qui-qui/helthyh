@@ -1,5 +1,5 @@
 {% extends "base/base.html" %}{% load static %}{% block title %}Registration{% endblock%} {% block form_styles %}
-<link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block content %}
+<link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block header %}
 <div class="svg-container">
     <svg viewbox="0 0 800 400" class="svg">
     <path id="curve" fill="hsl(181, 82%, 37%)" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
@@ -10,51 +10,52 @@
 <div class="slider-bottom">
     <h1>Here's all about wellness</h1>
     <h3>Having a healthy mind is just as important as a healty body</h3>
-</div>
+</div> {% endblock %} {% block content %}
 
-<div class="form-container">
-    <form class="form" action="." method="post">
-        <div class="title">Welcome</div>
-        <div class="subtitle">Let's create your account!</div>
-        {{ user_form.non_field_errors }}
-        <div class="input-container ic1">
-            {{ user_form.username.errors }}
-            <input name="{{ user_form.username.html_name }}" id="{{ user_form.username.id_for_label }}" class="input" type="text" required placeholder=" " />
-            <div class="cut"></div>
-            <label for="{{ user_form.username.id_for_label }}" class="placeholder">Username</label>
-            <!-- 
+<div class="main-container">
+    <div class="form-container">
+        <form class="form" action="." method="post">
+            <div class="title">Welcome</div>
+            <div class="subtitle">Let's create your account!</div>
+            {{ user_form.non_field_errors }}
+            <div class="input-container ic1">
+                {{ user_form.username.errors }}
+                <input name="{{ user_form.username.html_name }}" id="{{ user_form.username.id_for_label }}" class="input" type="text" required placeholder=" " />
+                <div class="cut"></div>
+                <label for="{{ user_form.username.id_for_label }}" class="placeholder">Username</label>
+                <!-- 
             
              -->
-        </div>
-        <div class="input-container ic2">
-            {{ user_form.first_name.errors }}
-            <input name="{{ user_form.first_name.html_name }}" id="{{ user_form.first_name.id_for_label }}" class="input" type="text" required placeholder=" " />
-            <div class="cut"></div>
-            <label for="{{ user_form.first_name.id_for_label }}" class="placeholder">First name</label>
-        </div>
-        <div class="input-container ic2">
-            {{ user_form.last_name.errors }}
-            <input name="{{ user_form.last_name.html_name }}" id="{{ user_form.last_name.id_for_label }}" class="input" type="text" required placeholder=" " />
-            <div class="cut"></div>
-            <label for="{{ user_form.last_name.id_for_label }}" class="placeholder">Last name</label>
-        </div>
-        <div class="input-container ic2">
-            {{ user_form.email.errors }}
-            <input name="{{ user_form.email.html_name }}" id="{{ user_form.email.id_for_label }}" class="input" type="email" required placeholder=" " />
-            <div class="cut"></div>
-            <label for="{{ user_form.email.id_for_label }}" class="placeholder">Email</label>
-        </div>
-        <div class="input-container ic2">
-            {{ user_form.password.errors }}
-            <input name="{{ user_form.password.html_name }}" id="{{ user_form.password.id_for_label }}" class="input" type="password" required placeholder=" " />
-            <div class="cut"></div>
-            <label for="{{ user_form.password.id_for_label }}" class="placeholder">Password</label>
-        </div>
-        {% csrf_token %}
-        <button type="text" class="submit-btn">Sign in</button>
-    </form>
+            </div>
+            <div class="input-container ic2">
+                {{ user_form.first_name.errors }}
+                <input name="{{ user_form.first_name.html_name }}" id="{{ user_form.first_name.id_for_label }}" class="input" type="text" required placeholder=" " />
+                <div class="cut"></div>
+                <label for="{{ user_form.first_name.id_for_label }}" class="placeholder">First name</label>
+            </div>
+            <div class="input-container ic2">
+                {{ user_form.last_name.errors }}
+                <input name="{{ user_form.last_name.html_name }}" id="{{ user_form.last_name.id_for_label }}" class="input" type="text" required placeholder=" " />
+                <div class="cut"></div>
+                <label for="{{ user_form.last_name.id_for_label }}" class="placeholder">Last name</label>
+            </div>
+            <div class="input-container ic2">
+                {{ user_form.email.errors }}
+                <input name="{{ user_form.email.html_name }}" id="{{ user_form.email.id_for_label }}" class="input" type="email" required placeholder=" " />
+                <div class="cut"></div>
+                <label for="{{ user_form.email.id_for_label }}" class="placeholder">Email</label>
+            </div>
+            <div class="input-container ic2">
+                {{ user_form.password.errors }}
+                <input name="{{ user_form.password.html_name }}" id="{{ user_form.password.id_for_label }}" class="input" type="password" required placeholder=" " />
+                <div class="cut"></div>
+                <label for="{{ user_form.password.id_for_label }}" class="placeholder">Password</label>
+            </div>
+            {% csrf_token %}
+            <button type="text" class="submit-btn">Sign in</button>
+        </form>
+    </div>
 </div>
-
 <script src="{% static 'script/form_script.js' %}"></script>
 {% endblock %}
 

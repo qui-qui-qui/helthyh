@@ -46,8 +46,8 @@ def edit_user_view(request):
             'account_form': account_form})
     else:
         user_form = UserEditForm(instance=request.user)
-        profile_form = AccountEditForm(instance=request.user.account)
+        account_form = AccountEditForm(instance=request.user.account)
         return render(request,
                       'account/edit.html',
                       {'user_form': user_form,
-                       'account_form': profile_form})
+                       'account_form': account_form})

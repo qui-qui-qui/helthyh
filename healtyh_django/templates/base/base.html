@@ -7,12 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}healthyhealthy{% endblock%}</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-    <link rel="icon" href="{% static 'img/icon2-round.png' %}" type="image/x-icon">
-    {% block form_styles %}{% endblock%}
+    <link rel="icon" href="{% static 'img/icon2-round.png' %}" type="image/x-icon"> {% block form_styles %}{% endblock%}
 </head>
 
 <body>
-    {% block content %} {% endblock %}
+    <div class="main-container">
+        {% block header %}
+        <header class="block">
+            <ul class="header-menu horizontal-list">
+                <li>
+                    <a class="header-menu-tab" href="{% url 'main_menu' %}"><span class="icon entypo-window scnd-font-color"></span>Home</a>
+                </li>
+                <li>
+                    <a class="header-menu-tab" href="{% url 'edit' %}"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
+                </li>
+                <li>
+                    <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
+                </li>
+                <li>
+                    <a class="header-menu-tab" href="#3"><span class="icon fontawesome-wrench scnd-font-color"></span>Widgets</a>
+                    <a class="header-menu-number" href="#4">2</a>
+                </li>
+                <li>
+                    <a class="header-menu-tab" href="#5"><span class="icon fontawesome-pencil scnd-font-color"></span>Notes</a>
+                </li>
+            </ul>
+            <div class="profile-menu">
+                <p>{{request.user.username}} <a href="{% url 'logout' %}"><span class="entypo-logout scnd-font-color"></span></a></p>
+            </div>
+        </header>{% endblock %} {% block content %} {% endblock %}
+    </div>
     <footer>
         <p></p>
     </footer>

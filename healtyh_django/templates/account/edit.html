@@ -1,11 +1,43 @@
 {% extends "base/base.html" %}{% load static %}{% block title %}Edit your account{% endblock%} {% block form_styles %}
 <link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block content %}
-<h1>Edit your account</h1>
-<p>You can edit your account using the following form:</p>
-<div class="form-container">
-    <form action="." method="post" enctype="multipart/form-data" class="form edit-account">
-        {{ user_form.as_div }} {{ account_form.as_div }} {% csrf_token %}
-        <p><input type="submit" value="Save changes" class="submit-btn"></p>
-    </form>
+<div class="main-container">
+    <h1>Edit your account</h1>
+    <p>You can edit your account using the following form:</p>
+    <div class="form-container">
+        <form action="." method="post" enctype="multipart/form-data" class="form edit-account">
+            <div>
+                <label for="{{ user_form.first_name.id_for_label }}">Имя:</label>
+                <input type="text" name="{{ user_form.first_name.html_name }}" value="{{ user_form.first_name.value }}" maxlength="150" id="{{ user_form.first_name.id_for_label }}">
+
+            </div>
+            <div>
+                <label for="{{ user_form.last_name.id_for_label }}">Фамилия:</label>
+                <input type="text" name="{{ user_form.last_name.html_name }}" value="{{ user_form.last_name.value }}" maxlength="150" id="{{ user_form.last_name.id_for_label }}">
+
+            </div>
+            <div>
+                <label for="{{ user_form.email.id_for_label }}">Почта:</label>
+                <input type="email" name="{{ user_form.email.html_name }}" value="{{ user_form.email.value }}" maxlength="150" id="{{ user_form.email.id_for_label }}">
+
+            </div>
+            <div>
+                <label for="{{ account_form.date_of_birth.id_for_label }}">Дата рождения:</label>
+                <input type="date" name="{{ account_form.date_of_birth.html_name }}" value="{{ account_form.date_of_birth.value }}" maxlength="150" id="{{ account_form.date_of_birth.id_for_label }}">
+
+            </div>
+            <div>
+
+                <label for="{{ account_form.photo.id_for_label }}">Фото:</label> На данный момент:
+                <img width="40px" alt="User photo" src="{{ request.user.account.photo.url }}">
+                <br> Изменить:
+                <input type="file" name="photo" accept="image/*" id="{{ account_form.photo.id_for_label }}">
+
+            </div>
+
+            {% csrf_token %}
+            <p><input type="submit" value="Save changes" class="submit-btn"></p>
+        </form>
+    </div>
 </div>
+
 {% endblock %}
