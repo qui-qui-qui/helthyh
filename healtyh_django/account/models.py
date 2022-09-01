@@ -4,7 +4,7 @@ from django.conf import settings
 class Account(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     date_of_birth = models.DateField(blank=True, null=True)
-    photo = models.ImageField(upload_to='users/%Y/%m/%d', blank=True)
+    photo = models.ImageField(upload_to='users/%Y/%m/%d', blank=True, default='no_photo.jpg')
     time_add = models.DateField(verbose_name='Время добавления',auto_now_add=True)
 
     def __str__(self):
