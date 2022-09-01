@@ -1,7 +1,7 @@
 window.onscroll = function() {
     let scrollBot = window.pageYOffset;
 
-    if (scrollBot > 200 && scrollBot < 700) {
+    if (scrollBot > 200 && scrollBot < 1200) {
         document.querySelector('body').style.backgroundColor = 'rgb(65, 233, 236)';
         document.querySelector('footer').style.backgroundColor = '#15172b';
         document.querySelector('path').fill = '#15172b';

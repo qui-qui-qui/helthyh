@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="{% static 'styles/form_styles.css' %}">{% endblock%} {% block content %}
 <h1>Edit your account</h1>
 <p>You can edit your account using the following form:</p>
-<form action="." method="post" enctype="multipart/form-data">
-    {{ user_form.as_p }} {{ account_form.as_p }} {% csrf_token %}
-    <p><input type="submit" value="Save changes"></p>
-</form>
+<div class="form-container">
+    <form action="." method="post" enctype="multipart/form-data" class="form edit-account">
+        {{ user_form.as_div }} {{ account_form.as_div }} {% csrf_token %}
+        <p><input type="submit" value="Save changes" class="submit-btn"></p>
+    </form>
+</div>
 {% endblock %}
